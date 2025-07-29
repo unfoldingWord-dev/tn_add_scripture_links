@@ -1,0 +1,16 @@
+# This project uses only Python standard library modules
+# No external dependencies required
+
+# Python 3.6+ required for:
+# - f-string formatting
+# - argparse
+# - pathlib (if used in future versions)
+
+# Standard library modules used:
+# - re (regular expressions)
+# - csv (CSV file handling)  
+# - difflib (text difference calculations)
+# - sys (system functions)
+# - glob (file pattern matching)
+# - os (operating system interface)
+# - argparse (command line argument parsing)
