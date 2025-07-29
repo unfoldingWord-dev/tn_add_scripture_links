@@ -132,11 +132,15 @@ dmypy.json
 # Generated output files
 *_converted.tsv
 *_diff.tsv
+# Allow expected test files
+!*_expected_diff.tsv
 
 # Sample/test files (unless specifically needed)
 tn_*.tsv
 # Allow example files
 !examples/tn_*.tsv
+# Allow test case files
+!test_cases/tn_*.tsv
 
 # IDE files
 # VS Code
