@@ -99,7 +99,7 @@ options:
 The script expects TSV (Tab-Separated Values) files with the translationNotes format where:
 
 - Column 0: Reference (e.g., "1:1", "2:5")
-- Column 5 or 6: Note text containing scripture references
+- Column 6: Note text containing scripture references
 
 ### Reference Detection
 

@@ -69,7 +69,7 @@ def add_verse_codes_to_column(rows, book_code):
             processed.append(row)
             continue
             
-        original = row[6] if len(row) > 6 else (row[5] if len(row) > 5 else "")
+        original = row[6] if len(row) > 6 else ""
         updated = original
 
         # Parse current context from reference column (column 0)
@@ -212,10 +212,7 @@ def add_verse_codes_to_column(rows, book_code):
                 for orig_text, new_text in changes_local:
                     changes.append((row[0] if len(row) > 0 else '', row[1] if len(row) > 1 else '', orig_text, new_text))
 
-            if len(row) > 6:
-                row[6] = updated
-            elif len(row) > 5:
-                row[5] = updated
+            row[6] = updated
 
         processed.append(row)
 

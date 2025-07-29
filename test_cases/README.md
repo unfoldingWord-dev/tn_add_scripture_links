@@ -113,7 +113,7 @@ Reference	ID	Tags	SupportReference	Quote	Occurrence	Note
 1:1	abc1		rc://*/ta/man/translate/translate-names	word	1	Note text with scripture references.
 ```
 
-The scripture references should be in the "Note" column (column 6, or column 5 if there are only 6 columns total).
+The scripture references should be in the "Note" column (column 6).
 
 ## Troubleshooting
 
