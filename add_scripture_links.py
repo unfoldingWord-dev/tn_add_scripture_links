@@ -444,6 +444,7 @@ def process_file(input_file, inplace=False):
         rows = list(reader)
 
     processed, changes = add_verse_codes_to_column(rows, book_code)
+    input_base, input_ext = os.path.splitext(input_file)
 
     if inplace:
         # Overwrite the original file
@@ -451,8 +452,7 @@ def process_file(input_file, inplace=False):
     else:
         # Write to converted file instead of overwriting
         # Create output filename by inserting "_converted" before the extension
-        base, ext = os.path.splitext(input_file)
-        output_file = f"{base}_converted{ext}"
+        output_file = f"{input_base}_converted{input_ext}"
 
     with open(output_file, 'w', encoding='utf-8') as f:
         for i, row in enumerate(processed):
@@ -460,7 +460,7 @@ def process_file(input_file, inplace=False):
             f.write('\n')
 
     # Write changes to a diff file
-    changes_file = f"tn_{book_code}_diff.tsv"
+    changes_file = f"{input_base}_diff{input_ext}"
     with open(changes_file, 'w', encoding='utf-8') as f:
         f.write('\t'.join(["Reference", "ID", "Original", "Replaced"]) + '\n')
         for row in changes:

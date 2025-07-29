@@ -170,11 +170,40 @@ See [Genesis 1:1](../../gen/01/01.md) and [chapter 2](../02/01.md) for more cont
 ```
 tn_add_scripture_links/
 ├── add_scripture_links.py    # Main script
+├── test_script.py            # Test validation script
 ├── README.md                 # This documentation
 ├── .gitignore               # Git ignore rules
 ├── requirements.txt         # Python dependencies (empty - uses stdlib only)
-└── example_files/           # Example TN TSV files (optional)
+├── test_cases/              # Test files and validation
+│   ├── README.md           # Test documentation
+│   ├── tn_PSA.tsv          # Psalms test file
+│   ├── tn_MAT.tsv          # Matthew test file
+│   ├── tn_JUD.tsv          # Jude test file
+│   └── tn_*_expected*.tsv  # Expected output files
+└── examples/               # Example TN TSV files (optional)
 ```
+
+## Testing
+
+The project includes a comprehensive test suite to validate functionality:
+
+```bash
+# Run all tests
+python3 test_script.py
+
+# Create sample test files (for development)
+python3 test_script.py --create-samples
+```
+
+The test suite validates:
+
+- Scripture reference detection accuracy
+- Proper markdown link generation
+- Correct relative path creation
+- Handling of various reference formats
+- Special cases (Psalms formatting, single-chapter books, etc.)
+
+See `test_cases/README.md` for detailed testing documentation.
 
 ## Error Handling
 
