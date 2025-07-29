@@ -1,0 +1,8 @@
+Reference	ID	Original	Replaced
+1:1	abc1	verses 2-4	[verses 2-4](../001/002.md)
+1:1	abc1	chapter 3	[chapter 3](../003/001.md)
+1:1	abc1	Psalms 2	[Psalms 2](../002/001.md)
+1:2	abc2	verse 3	[verse 3](../001/003.md)
+1:2	abc2	Joshua 1:8	[Joshua 1:8](../../jos/01/08.md)
+2:1	abc3	Acts 4:25-26	[Acts 4:25-26](../../act/04/25.md)
+2:1	abc3	Psalm 1:1	[Psalm 1:1](../001/001.md)
