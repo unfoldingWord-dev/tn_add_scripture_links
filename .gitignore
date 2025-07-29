@@ -131,9 +131,9 @@ dmypy.json
 # Project-specific ignores
 # Generated output files
 *_converted.tsv
-*_diff.tsv
-# Allow expected test files
-!*_expected_diff.tsv
+# Generated diff files (but not expected ones)
+tn_*_diff.tsv
+!test_cases/tn_*_expected_diff.tsv
 
 # Sample/test files (unless specifically needed)
 tn_*.tsv
